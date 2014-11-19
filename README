@@ -1,11 +1,15 @@
-## node-listen-udp-syslog
+## Installing
 
-node-listen-udp-syslog is a modularized Syslog udp server for handling RFC5424 messages (http://tools.ietf.org/html/rfc5424) over UDP (http://tools.ietf.org/html/rfc5426)
+Make sure CouchDB is installed, edit config.js and then
+
+    `
+    git clone repo
+    cd to source directory
+    npm install
+    `
 
 ## Running
 
-app.js provides an example of how to include and configure the library, as well as process received udp syslog messages.
+    `npm start`
 
-`node app.js`
-
-will listen on port 1514 and echo messages to the console
+it will listen on port 1514 and log messages to CouchDB

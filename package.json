@@ -1,0 +1,23 @@
+{
+  "name": "sysCouchLog",
+  "version": "0.0.1",
+  "description": "A syslog UDP server that logs to CouchDB",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abanppc/sysCouchLog.git"
+  },
+  "author": "Behrad Zari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abanppc/sysCouchLog/issues"
+  },
+  "homepage": "https://github.com/abanppc/sysCouchLog",
+  "dependencies": {
+    "nano": "^6.0.1"
+  }
+}
