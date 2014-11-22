@@ -2,11 +2,11 @@
 
 Make sure CouchDB is installed, edit config.js and then
 
-    `
+
     git clone repo
     cd to source directory
     npm install
-    `
+    
 
 ## Running
 
