@@ -34,6 +34,7 @@ if( cluster.isMaster ) {
             data = JSON.parse( msg.content.replace( /\w+:\s/g, '' ) )
         } catch( e ) {
         }
+        data.createdAt = Date.now();
         db.insert( data, function(err, body) {
             console.log( body || err );
         });
