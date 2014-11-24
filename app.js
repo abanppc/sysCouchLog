@@ -21,17 +21,15 @@ if( cluster.isMaster ) {
     server.start( config.ip, config.port, function (msg) {
         var data = msg;
         try {
-            ;
             if( msg.content.match( filter ) ) {
                 data = JSON.parse( msg.content.replace( /\w+:\s/g, '' ).replace( /@cee:/g, '') );
+                data.createdAt = Date.now();
+                db.insert( data, function(err, body) {
+                    console.log( body || err );
+                });
             }
         } catch( e ) {
             console.error( e );
         }
-        data.createdAt = Date.now();
-        db.insert( data, function(err, body) {
-            console.log( body || err );
-        });
     });
 }
-
