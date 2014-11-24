@@ -1,14 +1,18 @@
 ## Installing
 
-Make sure CouchDB is installed, edit config.js and then
+Make sure couchDB & node.js are installed. If you are not sure please check [installation guide](http://asas)
 
 
+    ```
     git clone repo
     cd to source directory
     npm install
+    ```
     
 
 ## Running
+
+Edit config.js, then
 
     `npm start`
 
