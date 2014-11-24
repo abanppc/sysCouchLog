@@ -1,6 +1,6 @@
 ## Installing
 
-Make sure couchDB & node.js are installed. If you are not sure please check [installation guide](http://asas)
+Make sure couchDB & node.js are installed. If you are not sure please check [installation guide](https://github.com/abanppc/sysCouchLog/wiki/Installing-on-CentOS-7)
 
 
     ```
@@ -12,7 +12,7 @@ Make sure couchDB & node.js are installed. If you are not sure please check [ins
 
 ## Running
 
-Edit config.js, then
+Edit [config.js](https://github.com/abanppc/sysCouchLog/blob/master/config.js), then
 
     `npm start`
 
