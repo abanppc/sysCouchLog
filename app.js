@@ -4,22 +4,13 @@ var config = require( './config' );
 var nano = require('nano');
 
 var db = nano(
-    'http://'+config.couchdb.user+":"+config.couchdb.pass+"@"+config.couchdb.host+':' + config.couchdb.port + "/" + config.couchdb.db
+    'http://'+config.couchdb.host+':' + config.couchdb.port + "/" + config.couchdb.db
 );
 
 if( cluster.isMaster ) {
-    /*db.create(config.couchdb.db, function (err1) {
-        db.get(config.couchdb.db, function(err, body) {
-            if (err) {
-                console.error(err, err1);
-                process.exit(1);
-            } else {
-                for (var i = 0; i < require('os').cpus().length; i++) {
-                    cluster.fork();
-                }
-            }
-        });
-    });*/
+    for (var i = 0; i < require('os').cpus().length; i++) {
+        cluster.fork();
+    }
 } else {
 
     process.on( 'uncaughtException', function(err){
