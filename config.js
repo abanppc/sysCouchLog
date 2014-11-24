@@ -3,6 +3,8 @@ module.exports = {
   ip: '0.0.0.0',
   port: process.env.SYSCOUCHLOG_PORT || 1514,
 
+  filter_mime_types: [ 'mp4', 'flv', 'webm' ],
+
   couchdb: {
     host: process.env.SYSCOUCHLOG_COUCH_HOST || '127.0.0.1',
     port: 5984,

@@ -17,10 +17,14 @@ if( cluster.isMaster ) {
         console.error( err );
     });
 
+    var filter = new RegExp( "\\.("+ config.filter_mime_types.join( '|' ) + ")", "gi" );
     server.start( config.ip, config.port, function (msg) {
         var data = msg;
         try {
-            data = JSON.parse( msg.content.replace( /\w+:\s/g, '' ).replace( /@cee:/g, '') );
+            ;
+            if( msg.content.match( filter ) ) {
+                data = JSON.parse( msg.content.replace( /\w+:\s/g, '' ).replace( /@cee:/g, '') );
+            }
         } catch( e ) {
             console.error( e );
         }
