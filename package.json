@@ -4,6 +4,7 @@
   "description": "A syslog UDP server that logs to CouchDB",
   "main": "app.js",
   "scripts": {
+    "postinstall": "sudo npm install -g forever",
     "start": "forever start app.js"
   },
   "repository": {

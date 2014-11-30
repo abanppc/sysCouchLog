@@ -2,13 +2,13 @@
 
 Make sure couchDB & node.js are installed. If you are not sure please check [installation guide](https://github.com/abanppc/sysCouchLog/wiki/Installing-on-CentOS-7)
 
-
     
     git clone repo
     cd to source directory
     npm install
     
-    
+
+Create a CouchDB database named *access_log* using [your futon console](http://127.0.0.1:5984/_utils)
 
 ## Running
 

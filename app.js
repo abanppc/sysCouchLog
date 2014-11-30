@@ -27,6 +27,8 @@ if( cluster.isMaster ) {
                 db.insert( data, function(err, body) {
                     console.log( body || err );
                 });
+            } else {
+                console.log( "Message didn't match filter ", filter );
             }
         } catch( e ) {
             console.error( e );

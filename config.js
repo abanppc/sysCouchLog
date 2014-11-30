@@ -10,7 +10,7 @@ module.exports = {
     port: 5984,
     user: process.env.SYSCOUCHLOG_COUCH_USER || 'admin',
     pass: process.env.SYSCOUCHLOG_COUCH_PASS || 'admin',
-    db: process.env.SYSCOUCHLOG_COUCH_DB || 'syslog'
+    db: process.env.SYSCOUCHLOG_COUCH_DB || 'access_log'
   }
 
 };
